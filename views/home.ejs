@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%>
+ 
+<h1>Home</h1>
+
+<p> <%= startingContent %> </p>
+
+<% posts.forEach(function(post) { %>
+<%    const currentTitle = (post.title); %>
+<%    const currentContent = (post.content); %>
+      <h1> <%= currentTitle %> </h1>
+      <p> <%= currentContent %> </p>
+<% }) %>
+
+<a href="/compose">
+    <button type="submit" class="btn btn-primary">Add More</button>
+</a>
+<%- include('partials/footer'); -%>
