@@ -5,11 +5,16 @@
 <p> <%= startingContent %> </p>
 
 <% posts.forEach(function(post) { %>
-<%    const currentTitle = (post.title); %>
-<%    const currentContent = (post.content); %>
-      <h1> <%= currentTitle %> </h1>
-      <p> <%= currentContent %> </p>
+      <h1> <%= post.title %> </h1>
+        <p> 
+        <%= post.content.substring(0, 170) + "  ...."%> 
+        <a href="/posts/<%=post.title%>">Read More</a>
+        </p>
+        
 <% }) %>
+
+<br>
+<br>
 
 <a href="/compose">
     <button type="submit" class="btn btn-primary">Add More</button>
